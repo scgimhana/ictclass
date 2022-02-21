@@ -1,0 +1,41 @@
+/* Contains global variables for the entire styling */
+/*$spacer-1x : 10px;
+$spacer-2x : 20px;
+$spacer-3x : 30px;
+$spacer-4x : 40px;
+$spacer-5x : 50px;*/
+$green:#2e9e32;
+$lgreen:#90be43;
+$red    :#8a1d03; 
+$white    :#FFF; 
+$black  :#000;
+$darkgrey :#333333;
+$lightgrey:#c4c4c3;
+$aboutusgrey:#fdf2ff;
+$footer:#329e35;
+$footer-bottom:#1b1b1b;
+ 
+$font-oswald : 'Oswald-Regular';
+$font-mont-L : 'Montserrat-Light';
+
+@mixin flex($type, $v-align, $h-align){
+   @if($type == 'inline'){
+       display: -webkit-inline-box;
+       display: -ms-inline-flexbox;
+       display: inline-flex;
+   }@else{
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+   }
+   @if($v-align != 'null'){
+       -webkit-box-align: $v-align;
+       -ms-flex-align: $v-align; 
+       align-items: $v-align;
+   }
+   @if($h-align != 'null'){
+      -webkit-box-pack: $h-align;
+   -ms-flex-pack: $h-align;
+   justify-content: $h-align;
+   }
+}

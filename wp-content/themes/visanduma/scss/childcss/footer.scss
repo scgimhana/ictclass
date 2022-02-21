@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 8, 2021, 9:07:02 AM
+    Author     : MSR
+*/
+footer{
+    background: #171717;
+    height: 70px;
+    display: flex; align-items: center;justify-content: center;
+    .footer-txt{
+        text-align: center;
+        font: 15px "Poppins";
+        line-height: 20px;
+        color: #fff;
+        font-weight: normal;
+    }    
+}
