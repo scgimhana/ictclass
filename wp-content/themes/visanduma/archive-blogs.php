@@ -14,10 +14,10 @@ get_header();
                             <img src="<?php echo get_field('logo_image'); ?>" alt="logo"/>
                         </a>
                         <h1>
-                            <?php echo get_field('top_heading'); ?>
+                            Latest insights of the Infor-Tech
                             <div class="link-sec">
                                 <a href="<?php echo get_home_url(); ?>">Home</a>
-                                <a href="<?php echo get_home_url(); ?>/documentations">Packages</a>
+                                <a href="<?php echo get_home_url(); ?>/courses">Courses</a>
                             </div>
                         </h1>
                     </div>
@@ -30,8 +30,9 @@ get_header();
     </div>
     <div class="blogs-sec">
         <div class="container">
-            <h2 class="d-none d-lg-block" data-name="<?php echo get_field('blogs_title'); ?>"><?php echo get_field('blogs_title'); ?></h2>
+            <h2 data-name="Blogs<?php echo get_field('blogs_title'); ?>">Blogs<?php echo get_field('blogs_title'); ?></h2>
             <?php echo get_field('blogs_text'); ?>
+            <p>A collection of articles on our personal blogs</p>
             <div class="row">
              <?php
               $args = array( 

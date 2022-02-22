@@ -238,7 +238,7 @@ get_header();
                     <?php /* echo do_shortcode('[contact-form-7 id="28" title="Contact form 1"]');*/ ?>
                 </div>
                 <div class="col-lg-6" id="map">
-                    <iframe src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.864841256007!2d80.39434567093846!3d8.316227320938358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf5d0a95911b1%3A0xb0af6125177b0555!2sINFOR-TEC%20ACADEMY!5e0!3m2!1sen!2slk!4v1645350823320!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>

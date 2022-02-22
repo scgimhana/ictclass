@@ -14,7 +14,7 @@ get_header();
                             <?php the_title(); ?>
                             <div class="link-sec">
                                 <a href="<?php echo get_home_url(); ?>">Home</a>
-                                <a href="<?php echo get_home_url(); ?>/courses">Packages</a>
+                                <a href="<?php echo get_home_url(); ?>/courses">Courses</a>
                             </div>
                         </h1>
                     </div>
@@ -34,8 +34,29 @@ get_header();
         ?>
         <div class="row mt-3">
             <div class="col-md-3">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="introductionTab" data-toggle="pill" href="#introductionSec" role="tab" aria-controls="introductionSec" aria-selected="true">Introduction</a>
+                <div class="position-relative">
+                    <select id="selectTab" name="cd-dropdown" class="cd-select d-block w-100 d-md-none">
+                        <option data-toggle="#introductionSec">Introduction</option>
+                        <?php if ( $modules ) : ?>
+                        <option data-toggle="#modulesSec">Modules</option>
+                        <?php endif; ?>
+                        <?php if ( $entry_qualifications ) : ?>
+                        <option data-toggle="#entrySec">Entry Qualifications</option>
+                        <?php endif; ?>
+                        <?php if ( $questions_issues ) : ?>
+                        <option data-toggle="#questionSec">Questions and issues</option>
+                        <?php endif; ?>
+                        <?php if ( $about_us ) : ?>
+                        <option data-toggle="#aboutSec">About us</option>
+                        <?php endif; ?>
+                        <option data-toggle="#applySec" selected>Apply Now</option>
+                    </select>
+                    <svg class="arrow-svg d-md-none" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.00003 6.00003C5.87216 6.00003 5.74416 5.95116 5.64653 5.85353L0.646531 0.853531C0.451156 0.658156 0.451156 0.341781 0.646531 0.146531C0.841906 -0.0487188 1.15828 -0.0488437 1.35353 0.146531L6.00003 4.79303L10.6465 0.146531C10.8419 -0.0488437 11.1583 -0.0488437 11.3535 0.146531C11.5488 0.341906 11.5489 0.658281 11.3535 0.853531L6.35354 5.85353C6.25591 5.95116 6.12791 6.00003 6.00003 6.00003Z" fill="#009C80"/>
+                    </svg>
+                </div>
+                <div class="nav flex-column nav-pills d-none d-md-flex" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link " id="introductionTab" data-toggle="pill" href="#introductionSec" role="tab" aria-controls="introductionSec" aria-selected="true">Introduction</a>
                     <?php if ( $modules ) : ?>
                         <a class="nav-link" id="#modulesTab" data-toggle="pill" href="#modulesSec" role="tab" aria-controls="modulesSec" aria-selected="false">Modules</a>
                     <?php endif; ?>
@@ -48,11 +69,12 @@ get_header();
                     <?php if ( $about_us ) : ?>
                         <a class="nav-link" id="#aboutTab" data-toggle="pill" href="#aboutSec" role="tab" aria-controls="aboutSec" aria-selected="false">About us</a>
                     <?php endif; ?>
+                    <a class="nav-link active" id="#applyTab" data-toggle="pill" href="#applySec" role="tab" aria-controls="applySec" aria-selected="false">Apply Now</a>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="introductionSec" role="tabpanel" aria-labelledby="introductionTab">
+                    <div class="tab-pane fade" id="introductionSec" role="tabpanel" aria-labelledby="introductionTab">
                          <h3><?php the_field('course_name'); ?></h3>
                          <h4><?php the_field('course_instructor'); ?></h4>
                          <div class="info-text"><?php the_field('course_information_text'); ?></div>
@@ -81,6 +103,10 @@ get_header();
                          <div class="info-text"><?php the_field('about_us'); ?></div>
                     </div>
                     <?php endif; ?>
+                    <div class="tab-pane fade show active" id="applySec" role="tabpanel" aria-labelledby="applyTab">
+                        <h3 class="mb-3">Apply Now !</h3>
+                        <?php echo do_shortcode('[contact-form-7 id="47" title="Apply Form"]'); ?>
+                    </div>
                   </div>
             </div>
         </div>

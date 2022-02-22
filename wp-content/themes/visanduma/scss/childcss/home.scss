@@ -372,7 +372,7 @@
         }
     }
     .mvp-sec{
-        padding: 0px 0px 80px;
+        padding: 0px 0px 80px; 
         .advantages-cards-sec{
             padding: 10px 0px;
             .advantage-card{
@@ -700,6 +700,9 @@
                 @media screen and (max-width: 768px) {
                     height: 400px;
                 }
+                @media screen and (max-width: 575px) {
+                    height: 200px;
+                }
                 .carousel-caption{
                     position: absolute;
                     padding: 0;
@@ -790,7 +793,6 @@
             }
         }
     }
-    .blogs-sec,
     .nav-pills{
         position: relative;
         overflow: hidden;
@@ -829,10 +831,33 @@
         }
     }
     .blog-content,
+    .cd-select{
+        height: 54px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #01a1dd!important;
+        box-shadow: 0 5px 10px rgba(173, 225, 250, 0.4), 0 5px 10px rgba(97,202,219,0.4);
+        font: 18px "Roboto";
+        line-height: 24px;
+        color: #000;
+        margin-bottom: 25px;
+        padding: 5px 15px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    .arrow-svg {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -3px;
+    }
     .tab-content{
         margin-bottom: 60px;
         @media screen and (max-width: 768px) {
             margin-bottom: 40px;
+        }
+        @media screen and (max-width: 575px) {
+            margin-bottom: 20px;
         }
         h3{
             font-family: Chronicle Display A;
@@ -870,10 +895,54 @@
                 }
             }
         }
-        
+        form{
+            padding: 10px 0px;
+            label{
+                font: 16px "Roboto";
+                line-height: 16px;
+                color: #243130;
+                width: 100%;
+            }
+            select,
+            input,textarea{
+                font: 18px "Roboto";
+                line-height: 24px;
+                color: #000;
+                border: 1px solid #01a1dd;
+                box-shadow: 0 5px 10px rgba(173, 225, 250, 0.4), 0 5px 10px rgba(97,202,219,0.4);
+                &::placeholder{
+                    color: #666;
+                }
+            }
+            input{
+                height: 44px;
+                border-radius: 8px;
+                outline: none;
+            }
+            textarea{
+                height: 240px;
+            }
+            input[type="submit"],
+            button{
+                width: 320px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                font: 22px "Roboto";
+                line-height: 26px;
+                border-radius: 8px;
+                color: #171717;
+                border: 1px solid #01a1dd;
+                box-shadow: 0 5px 10px rgba(173, 225, 250, 0.4), 0 5px 10px rgba(97,202,219,0.4);
+                outline: none;
+                box-shadow: none;
+            }
+        }
     }
 }
-
+.blogs-sec,
 .packages-sec{
     padding: 50px 0px 80px;
     p{

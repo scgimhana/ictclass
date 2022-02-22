@@ -8,14 +8,6 @@
 </div>
 <?php wp_footer(); ?>
 <script>
-    $('.header .navbar-toggler').on("click", function(e){
-        e.stopPropagation();
-        e.preventDefault();
-        $('.header .navbar-toggler .menu').toggle();
-        $('.header .navbar-collapse').toggleClass('show');
-        $('.header .navbar-toggler .close-menu').toggleClass('d-none');
-        $('.header .sign-sec').toggle();
-    });
     $(document).ready(function() {
         var headerHeight = $(this).find("header").outerHeight(true);
         var footerHeight = $(this).find("#footer").outerHeight(true);
@@ -65,7 +57,14 @@
                 }
             }]
         });
-
+            
+        $('#selectTab').on('change', function() {
+            var tabID = $(this).find(":selected").data('toggle');
+            $('.tab-pane').removeClass("show");
+            $('.tab-pane').removeClass("active");
+            $(tabID).toggleClass('show');
+            $(tabID).toggleClass('active');
+        });
     });
 </script>
 </body>
