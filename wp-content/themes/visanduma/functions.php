@@ -225,7 +225,7 @@ function create_courses() {
             'description'           => __( 'Course Description', 'text_domain' ),
             'supports'              => $supports,
             'taxonomies'            => array( 'category', 'post_tag' ),
-            'hierarchical'          => false,
+            'hierarchical'          => true,
             'public'                => true,
             'show_ui'               => true,
             'show_in_menu'          => true,

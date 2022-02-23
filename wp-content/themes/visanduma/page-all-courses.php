@@ -1,7 +1,7 @@
 <?php
-/**
-* Template Name: Courses
- */
+/*
+* Template Name: All Courses
+*/
 get_header();
 ?>
 <div id="mainwrapper" class="package-mods">
@@ -17,7 +17,7 @@ get_header();
                             Find your path !
                             <div class="link-sec">
                                 <a href="<?php echo get_home_url(); ?>">Home</a>
-                                <a href="<?php echo get_home_url(); ?>/courses">Course</a>
+                                <a href="<?php echo get_home_url(); ?>/all-blogs">Blogs</a>
                             </div>
                         </h1>
                     </div>
@@ -30,8 +30,8 @@ get_header();
     </div>
     <div class="packages-sec">
         <div class="container">
-            <h2 data-name="Courses">Courses</h2>
-            <?php echo get_field('packages_text'); ?>
+            <h2 data-name="<?php echo get_field('courses_title'); ?>"><?php echo get_field('courses_title'); ?></h2>
+            <?php echo get_field('courses_text'); ?>
             <div class="row">
              <?php
               $args = array( 
