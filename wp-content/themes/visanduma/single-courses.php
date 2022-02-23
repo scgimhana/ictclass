@@ -14,7 +14,7 @@ get_header();
                             <?php the_title(); ?>
                             <div class="link-sec">
                                 <a href="<?php echo get_home_url(); ?>">Home</a>
-                                <a href="<?php echo get_home_url(); ?>/courses">Courses</a>
+                                <a href="<?php echo get_home_url(); ?>/all-courses">Courses</a>
                             </div>
                         </h1>
                     </div>
